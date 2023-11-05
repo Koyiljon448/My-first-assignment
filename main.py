@@ -1,15 +1,17 @@
-try:
-  score = int(input("Enter the score:"))
-except:
-   print("Error, please enter the numeric input between 0 and 100")
-else:
-   if score >= 90:
-      print("Your Grade is A")
-   elif score >= 80:
-      print("Your Grade is B")
-   elif score >= 70:
-      print("Your Grade is C")
-   elif score >= 60:
-      print("Your Grade is D")
-   else:
-      print("Your Grade is F")
+total = 0
+count = 0
+while True:
+   user_input = input("Enter a number")
+   if user_input.lower() == "done":
+       break
+   try:
+      number = float(user_input)
+      total += number
+      count += 1
+   except ValueError:
+      print("Invalid input!")
+if count > 0:
+    avarage = total / count
+    print(f"Sum of input: {total}")
+    print(f"Number of input: {count}")
+    print(f"Avarage of input numbers: {avarage}")
