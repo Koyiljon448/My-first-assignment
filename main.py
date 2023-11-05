@@ -1,13 +1,15 @@
 try:
-   hour = int(input("Enter Hours:"))
-   rate = int(input("Enter rate"))
-
+  score = int(input("Enter the score:"))
 except:
-    (print("Error, please enter numeric input!"))
+   print("Error, please enter the numeric input between 0 and 100")
 else:
-   if hour <= 40:
-       salary = int(hour) * float(rate)
-       print("Salary:", salary)
+   if score >= 90:
+      print("Your Grade is A")
+   elif score >= 80:
+      print("Your Grade is B")
+   elif score >= 70:
+      print("Your Grade is C")
+   elif score >= 60:
+      print("Your Grade is D")
    else:
-      salary = int(hour) * float(rate) * 1.5
-      print("Salary:", salary)
+      print("Your Grade is F")
